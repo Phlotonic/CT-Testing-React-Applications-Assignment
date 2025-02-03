@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useCreatePost } from './hooks/usePostMutations';
-import CreatePostForm from './components/CreatePost';
+import CreatePostForm from './components/CreatePost/CreatePostForm';
 
 // Mock the useCreatePost hook
 jest.mock('./hooks/usePostMutations', () => ({

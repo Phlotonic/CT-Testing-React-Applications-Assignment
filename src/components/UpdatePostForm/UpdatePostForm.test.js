@@ -19,8 +19,8 @@ test('UpdatePostForm test', () => {
   );
 
   // Simulate user typing into the title and body fields
-  fireEvent.change(screen.getByLabelText(/title/i), { target: { value: 'Updated Post Title' } });
-  fireEvent.change(screen.getByLabelText(/body/i), { target: { value: 'Updated Post Content' } });
+  fireEvent.change(screen.getByPlaceholderText(/post title/i), { target: { value: 'Updated Post Title' } });
+  fireEvent.change(screen.getByPlaceholderText(/post content/i), { target: { value: 'Updated Post Content' } });
 
   // Trigger the update event
   fireEvent.click(screen.getByText(/update/i));

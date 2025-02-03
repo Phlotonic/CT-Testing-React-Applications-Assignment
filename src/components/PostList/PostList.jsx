@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchPosts } from '../../api/client.js';
 import { useUpdatePost, useDeletePost } from '../../hooks/usePostMutations.js';
+import UpdatePostForm from '../UpdatePostForm/UpdatePostForm';
 
 const PostList = () => {
   const { data: posts = [], isLoading } = useQuery({
@@ -90,7 +91,7 @@ const PostList = () => {
         {posts.map((post) => (
           <li key={post.id} style={styles.postItem}>
             {editingPost === post.id ? (
-              <EditPostForm
+              <UpdatePostForm
                 post={post}
                 editedTitle={editedTitle}
                 editedBody={editedBody}
